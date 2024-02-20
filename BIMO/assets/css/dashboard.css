@@ -1,0 +1,229 @@
+.logo {
+    margin-left: 20px; /* Ajusta la posición del logo */
+    margin-top: 10px; /* Ajusta la posición del logo */
+    font-size: 24px; /* Tamaño del texto del logo */
+    font-weight: bold; /* Peso de la fuente del logo */
+    color: #ffffff; /* Color del texto del logo */
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    padding: 0 1rem;
+}
+
+.main {
+    width: 100%;
+    padding: 2rem;
+    text-align: center;
+}
+
+.center-text {
+    margin-bottom: 2rem;
+    text-align: center; /* Añadir esta línea para centrar el texto */
+}
+
+
+.product-group {
+    display: flex;
+    justify-content: space-around; /* Cambiar a space-around para más espacio */
+    gap: 20px;
+    align-items: flex-start; /* Alinear elementos al principio del contenedor */
+}
+
+.product-card {
+    flex: 1;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    text-align: center;
+}
+
+.product-card img {
+    width: 100%; /* Ocupar todo el ancho del contenedor */
+    height: auto;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+
+.product-info {
+    margin-top: 1rem;
+}
+
+.wishlist-cart i {
+    font-size: 20px;
+    margin-left: 1rem;
+}
+
+.fa-search:before {
+    content: "\f002"; /* Código Unicode del icono de lupa */
+}
+
+.fa-shopping-cart:before {
+    content: "\f07a"; /* Código Unicode del icono de carrito */
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: 3rem; /* Separación entre el header y el container */
+}
+
+aside {
+    /* Estilos para el aside */
+}
+
+main {
+    width: 70%;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.info {
+    margin-left: 1rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+p {
+    margin-bottom: 1rem;
+    color: #666;
+}
+
+/* Estilo para la imagen */
+.aside-image {
+    width: 150%; /* Ancho mayor que el contenedor para hacerla más grande */
+    height: auto;
+    border-radius: 10px 0 0 10px; /* Redondear solo la esquina superior izquierda */
+    margin-left: -25%; /* Ajustar la imagen más a la izquierda */
+}
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2; /* Fondo neutro */
+    color: #333; /* Texto neutro */
+}
+
+/* Estilos para la lista de productos */
+.product-list {
+    list-style: none;
+    padding: 0;
+    display: flex; /* Mostrar los elementos en línea */
+    flex-wrap: wrap; /* Permitir que se envuelvan a una nueva línea si no hay suficiente espacio */
+    justify-content: center; /* Centrar los elementos horizontalmente */
+}
+
+.product-list li {
+    margin: 10px; /* Espacio entre los elementos */
+    padding: 20px; /* Espacio dentro del cuadro de cada producto */
+    border: 1px solid #ccc; /* Borde alrededor del cuadro */
+    border-radius: 10px; /* Bordes redondeados */
+    display: flex; /* Mostrar los elementos en línea */
+    align-items: center; /* Centrar verticalmente los elementos */
+    text-align: center; /* Centrar el contenido horizontalmente */
+    background-color: #fff; /* Fondo blanco */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    transition: box-shadow 0.3s ease; /* Transición suave de la sombra */
+}
+
+.product-list li:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Aumentar la sombra al pasar el ratón */
+}
+
+.product-list img {
+    margin-right: 20px;
+    max-width: 50px;
+    height: auto;
+}
+
+.product-list a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.product-list a:hover {
+    color: #666;
+}
+
+/* Estilos para el título */
+.title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+    padding-top: 20px; /* Espacio adicional en la parte superior */
+}
+
+
+.message-container {
+    max-width: 600px;
+    background-color: #d4af37; /* Dorado */
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    flex-direction: column; /* Alinear los elementos verticalmente */
+    margin: 0 auto; /* Centrar horizontalmente */
+}
+
+
+.message {
+    text-align: center; /* Centrar el texto */
+    color: #fff; /* Texto blanco */
+    margin: 0; /* Eliminar márgenes para una alineación perfecta */
+}
+
+.message p {
+    font-size: 18px;
+    color: #fff; /* Texto blanco */
+    line-height: 1.6; /* Espacio entre líneas */
+    font-family: 'Cinzel Decorative', serif; /* Aplicar la fuente 'Cinzel Decorative' */
+}
+
+
+.message p {
+    font-size: 18px;
+    color: #fff; /* Texto blanco */
+    line-height: 1.6; /* Espacio entre líneas */
+}
