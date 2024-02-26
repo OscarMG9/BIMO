@@ -1,30 +1,11 @@
 function validarUsuario() {
     var usuario = document.getElementById('usuario').value;
-
     console.log(usuario)
-
-    if(usuario === ''){
-        document.getElementById('text-error-usuario').innerHTML = 'El usuario es requerido.';
-        return false;
-    }
-    else{
-        document.getElementById('text-error-usuario').innerHTML = '';
-        return true;
-    }
 }
 
 function validarContrasena() {
     var password = document.getElementById('pass').value;
     console.log(password)
-
-    if(password === ''){
-        document.getElementById('text-error-pass').innerHTML = 'La contraseña es requerida.';
-        return false;
-    }
-    else{
-        document.getElementById('text-error-pass').innerHTML = '';
-        return true;
-    }
 }
 
 function validarFormulario() {
