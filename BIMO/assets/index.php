@@ -1,3 +1,4 @@
+<?php include("./backend/conexion.php")?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -26,7 +27,7 @@
                     <div class="forget">
                         <label for="" class="text-light"><input type="checkbox">Recordar <a href="#">Olvide mi Contraseña</a></label>
                     </div>
-                    <button class="my-3"> Log in</button>
+                    <a type="submit" class="btn btn-light rounded btn-entrar my-3 "  href="./html/Dashboard.html" onclick="validarFormulario()"> Log in</a>
                     <div class="register">
                         <p class="text-light">No tengo una cuenta <a href="#">Registrarse</a></p>
                     </div>
