@@ -86,6 +86,50 @@ nav ul li {
 }
 
 
+
+
+
+.product-color {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 5px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+/* Agrega estilos específicos para cada color */
+.product-color.negro {
+    background-color: #000;
+}
+
+.product-color.gris {
+    background-color: #B4B4B8;
+}
+
+.product-color.azul-marino {
+    background-color: #000080;
+}
+
+.product-color.azul {
+    background-color: #51829B;
+}
+
+.product-color.beige {
+    background-color: #EADFB4;
+}
+
+.product-color.cafe {
+    background-color: #3F2305;
+}
+
+.product-color.marron {
+    background-color: #994D1C;
+}
+
+
+
+
 .wishlist-cart i {
     font-size: 20px;
     margin-left: 1rem;
