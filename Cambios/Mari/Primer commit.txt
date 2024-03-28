@@ -1,0 +1,17 @@
+Cambios hechos:
+- Cambio de ruta del fondo.
+- Autentificación de la página login con la Base de Datos BIMO.
+- Cambio de extensión del Dashboard.html a Dashboard.php, con el fin de
+  realizar consultas posteriores.
+- Anexo de la Base de Datos BIMO con algunas modificaciones:
+        - Código agregado para que se pueda reemplazar fácilmente con la
+          versión anterior.
+        - Verificación que se puedan colocar acentos en la Base de
+          Datos.
+- Anexo de algunos registros para trabajar con la Base de Datos:
+        - Registros generados por el ChatGPT.
+        - Registros generados por el ChatGPT que se obtuvieron de la
+          página Dashboard.
+
+COMANDO EJECUTADO PARA EL COMMIT:
+git commit -m "Autenticación con la vista usuarios y la Base de datos"

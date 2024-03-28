@@ -12,16 +12,16 @@
     <section>
         <div class = "form-box">
             <div class="form-value">
-                <form action="">
+                <form action="./backend/admin/login.php" method="post">
                     <h2>Login</h2>
                     <div class="inputbox">
                         <ion-icon name="mail-outline"> </ion-icon>
-                       <input type="email" required>
-                       <label for="">Usuario</label>
+                        <input type="email" name="Correo" required>
+                        <label for="">Usuario</label>
                     </div>
                     <div class="inputbox">
                         <ion-icon name="lock-closed-outline"></ion-icon>
-                        <input type="password"required>
+                        <input type="password" name="Contrasena" required>
                         <label for="">Contraseña </label>
                     </div>
                     <div class="forget">

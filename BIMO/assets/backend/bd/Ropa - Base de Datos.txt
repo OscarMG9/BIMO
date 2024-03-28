@@ -1,0 +1,44 @@
+DROP DATABASE IF EXISTS BIMO;
+
+CREATE DATABASE IF NOT EXISTS BIMO CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+USE BIMO;
+
+-- Tabla Usuario
+CREATE TABLE IF NOT EXISTS Usuario (
+    IdUsuario INT(3) PRIMARY KEY NOT NULL,
+    Nombre VARCHAR(50) NOT NULL,
+    Correo VARCHAR(50) NOT NULL,
+    Contrasena VARCHAR(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- Tabla Colores
+CREATE TABLE IF NOT EXISTS Colores (
+    IdColor INT(3) PRIMARY KEY NOT NULL,
+    NombreColor VARCHAR(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- Tabla Temporada
+CREATE TABLE IF NOT EXISTS Temporada (
+    IdTemporada INT(3) PRIMARY KEY NOT NULL,
+    NombreTemporada VARCHAR(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- Tabla Ropa
+CREATE TABLE IF NOT EXISTS Ropa (
+    IdRopa INT(3) PRIMARY KEY NOT NULL,
+    NombrePrenda VARCHAR(50) NOT NULL,
+    DescripcionP TEXT NOT NULL,
+    Precio FLOAT(4,2) NOT NULL,
+    Sexo ENUM('Masculino', 'Femenino') NOT NULL,
+    NombreFoto VARCHAR(100) NOT NULL,
+    Cantidad INT(4) NOT NULL,
+    Talla ENUM('CH', 'M', 'G', 'EG') NOT NULL,
+    Relevancia BOOL NOT NULL,
+    ImagenPrenda MEDIUMBLOB,
+    TipoExtension VARCHAR(10),
+    IdColor INT(3) NOT NULL,
+    IdTemporada INT(3) NOT NULL,
+    FOREIGN KEY (IdColor) REFERENCES Colores(IdColor),
+    FOREIGN KEY (IdTemporada) REFERENCES Temporada(IdTemporada)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

@@ -1,0 +1,57 @@
+-- Inserción de registros
+
+
+-- ===================== Ejemplos con ChatGPT ========================== 
+-- Insertar registros en la tabla Usuario
+INSERT INTO Usuario (IdUsuario, Nombre, Correo, Contrasena) VALUES
+(1, 'Juan Perez', 'juan@example.com', '123456'),
+(2, 'María López', 'maria@example.com', 'abcdef'),
+(3, 'Pedro Ramirez', 'pedro@example.com', 'qwerty');
+
+-- Insertar registros en la tabla Colores
+INSERT INTO Colores (IdColor, NombreColor) VALUES
+(1, 'Rojo'),
+(2, 'Verde'),
+(3, 'Azul');
+
+-- Insertar registros en la tabla Temporada
+INSERT INTO Temporada (IdTemporada, NombreTemporada) VALUES
+(1, 'Primavera'),
+(2, 'Verano'),
+(3, 'Otoño'),
+(4, 'Invierno');
+
+-- Insertar registros en la tabla Ropa
+INSERT INTO Ropa (IdRopa, NombrePrenda, DescripcionP, Precio, Sexo, NombreFoto, Cantidad, Talla, Relevancia, IdColor, IdTemporada)
+VALUES
+(1, 'Camiseta Manga Corta', 'Camiseta de algodón con estampado floral.', 25.99, 'Femenino', 'camiseta_floral.jpg', 50, 'M', 1, 1, 1),
+(2, 'Camisa Casual', 'Camisa de manga larga con diseño a cuadros.', 39.99, 'Masculino', 'camisa_cuadros.jpg', 30, 'G', 1, 2, 2),
+(3, 'Pantalón Vaquero', 'Pantalón vaquero clásico de corte recto.', 45.50, 'Masculino', 'pantalon_vaquero.jpg', 40, 'M', 1, 3, 3);
+
+
+
+-- ===================== Ejemplos con ChatGPT sacados de la página ========================== 
+-- Insertar registros en la tabla Ropa
+INSERT INTO Ropa (IdRopa, NombrePrenda, DescripcionP, Precio, Sexo, NombreFoto, Cantidad, Talla, Relevancia, IdColor, IdTemporada)
+VALUES
+(4, 'Saco largo', 'Elegante y cómodo, ideal para ocasiones formales.', 307.00, 'Femenino', 'banner-image-1.jpg', 5, 'G', 1, 1, 1),
+(5, 'Blazer', 'Versátil y moderno, perfecto para looks casuales o formales.', 245.00, 'Masculino', 'banner-image-2.jpg', 4, 'M', 1, 2, 2),
+(6, 'Vestido largo liso', 'Elegante y atemporal, ideal para eventos formales.', 178.00, 'Femenino', 'banner-image-3.jpg', 6, 'CH', 1, 3, 3),
+(7, 'Chaqueta de cuero para hombre', 'Clásica y resistente.', 95.00, 'Masculino', 'banner-image-4.jpg', 2, 'EG', 1, 1, 2);
+
+-- Insertar registros en la tabla Colores (para los colores disponibles)
+INSERT INTO Colores (IdColor, NombreColor) VALUES
+(4, 'Negro'),
+(5, 'Gris'),
+(6, 'Azul marino'),
+(7, 'Azul'),
+(8, 'Beige'),
+(9, 'Café'),
+(10, 'Marrón');
+
+-- Insertar registros en la tabla Temporada (para las temporadas disponibles)
+INSERT INTO Temporada (IdTemporada, NombreTemporada) VALUES
+(5, 'Verano'),
+(6, 'Primavera'),
+(7, 'Otoño');
+

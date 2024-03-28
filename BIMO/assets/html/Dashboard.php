@@ -10,6 +10,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 
 </head>
+
+<?php
+    include("../backend/conexion.php");
+    $ConsultaGeneral = mysqli_query($conexion, "SELECT * FROM Ropa");
+?>
+
 <body>
     <header>
         <h1 class="logo">BIMO</h1>

@@ -3,12 +3,14 @@
 
     include '../conexion.php';
 
-    $user = $_POST['Nombre_U'];
-    $passwordLogin = $_POST['Contrasena'];
-    $checkLogin = mysqli_query($conexion, "SELECT * FROM usuario WHERE Nombre_U = '$user' AND Contrasena = '$passwordLogin'");
+    $correo = $_POST['Correo'];
+    $contrasena = $_POST['Contrasena'];
+
+    // Consulta para verificar las credenciales usando el correo electrónico
+    $checkLogin = mysqli_query($conexion, "SELECT * FROM Usuario WHERE Correo = '$correo' AND Contrasena = '$contrasena'");
 
     if(mysqli_num_rows($checkLogin) > 0){
-        $_SESSION['Nombre_U'] = $user;
+        $_SESSION['Correo'] = $correo;
         header("location: ../../html/Dashboard.php");
         exit;
     } else{
