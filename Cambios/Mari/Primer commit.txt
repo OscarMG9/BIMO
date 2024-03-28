@@ -15,3 +15,6 @@ Cambios hechos:
 
 COMANDO EJECUTADO PARA EL COMMIT:
 git commit -m "Autenticación con la vista usuarios y la Base de datos"
+
+ALGO MÁS QUE OLVIDÉ MENCIONAR:
+- Se agregó la carpeta ".vscode"

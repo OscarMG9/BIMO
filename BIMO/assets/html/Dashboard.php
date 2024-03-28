@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BIMO</title>
-    <link rel="stylesheet" type="text/css" href="../css/dashboard.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/dashboard.css">
 
 </head>
 
 <?php
     include("../backend/conexion.php");
+    include("../backend/ropa/functions/obtenerColor(idColor).php");
     $ConsultaGeneral = mysqli_query($conexion, "SELECT * FROM Ropa");
 ?>
 
@@ -38,7 +39,8 @@
             <img src="../img/Logo.jpg" alt="">
             <h2>Nuevas Colecciones</h2>
         </div>
-        <div class="product-group">
+        <!-- 
+            <div class="product-group">
             <div class="product-card">
                 <img src="../img/banner-image-1.jpg" alt="Product Image 2" id="productImage">
                 <div class="product-info">
@@ -108,8 +110,39 @@
                 </div>
                 
             </div>
+        </div> 
+    -->
+
+    <!-- Aquí puede ir el section que está en los commits -->
+    <section>
+        <div class="product-group">
+            <?php
+            // Iterar sobre los resultados de la consulta
+            while ($fila = mysqli_fetch_assoc($ConsultaGeneral)) {
+                // Obtener el nombre del color según el ID del color
+                $color = obtenerColor($fila['IdColor']);
+                ?>
+                <div class="product-card">
+                    <!-- Convertir el dato binario de la imagen a una imagen -->
+                    <img src="data:image/jpeg;base64,<?php echo base64_encode($fila['ImagenPrenda']); ?>" alt="<?php echo $fila['NombrePrenda']; ?>">
+                    <div class="product-info">
+                        <h2><?php echo $fila['NombrePrenda']; ?></h2>
+                        <p>Descripción:</p>
+                        <p><?php echo $fila['DescripcionP']; ?></p>
+                        <p>Colores disponibles:</p>
+                        <div>
+                            <!-- Mostrar el color según el ID del color -->
+                            <span class="product-color <?php echo $color; ?>"></span>
+                        </div>
+                        <p>$<?php echo $fila['Precio']; ?></p>
+                        <p class="product-stock">En existencia: <?php echo $fila['Cantidad']; ?></p>
+                    </div>
+                </div>
+            <?php } ?>
         </div>
-        
+    </section>    
+
+
 
     <div class="container">
         <aside>

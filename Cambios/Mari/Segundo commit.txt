@@ -1,0 +1,44 @@
+Cambios hechos:
+- Se agregó un claúsula para que la página pudiera ver los acentos y no se mostrara con este caracter �.
+- Se agregó el modulo para que las photo-cards se saquen de la base de datos (úniccamente en la sección de "Nuevas Colleciones").
+- Se colocó un cambio que habí olvidado mencionar en el primer commit.
+- Se agregaron algunos elementos en la carpeta de backend:
+	- Carpetas: ropa/functions.
+	- Archivo /obtenerColor(idColor).php
+
+- Se creó una función que permitiera obtener los colores y visualizar los cuadritos.
+
+
+
+
+
+<section>
+        <div class="product-group">
+            <?php
+            // Iterar sobre los resultados de la consulta
+            while ($fila = mysqli_fetch_assoc($ConsultaGeneral)) {
+                // Obtener el nombre del color según el ID del color
+                $color = obtenerColor($fila['IdColor']);
+                ?>
+                <div class="product-card">
+                    <!-- Convertir el dato binario de la imagen a una imagen -->
+                    <img src="data:image/jpeg;base64,<?php echo base64_encode($fila['ImagenPrenda']); ?>" alt="<?php echo $fila['NombrePrenda']; ?>">
+                    <div class="product-info">
+                        <h2><?php echo $fila['NombrePrenda']; ?></h2>
+                        <p>Descripción:</p>
+                        <p><?php echo $fila['DescripcionP']; ?></p>
+                        <p>Colores disponibles:</p>
+                        <div>
+                            <!-- Mostrar el color según el ID del color -->
+                            <span class="product-color <?php echo $color; ?>"></span>
+                        </div>
+                        <p>$<?php echo $fila['Precio']; ?></p>
+                        <p class="product-stock">En existencia: <?php echo $fila['Cantidad']; ?></p>
+                    </div>
+                </div>
+            <?php } ?>
+        </div>
+    </section>    
+
+
+CÓDIGO DONDE SI SALE PERO SE AONTONAN LAS CARTAS JE
